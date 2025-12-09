@@ -4,7 +4,7 @@
 let x, y;
 let vx, vy;
 const g = 1;
-const jump = 30;
+const jump = 40;
 let s,t;
 
 
@@ -25,7 +25,6 @@ function windowResized(){
 
 
 
-
 function draw(){
   background(160, 192, 255);
   const size = height * 0.1;
@@ -36,11 +35,9 @@ function draw(){
   rect(0, groundY, width, height - groundY);
   
   
-  //s = 400
-  //t = 160
+  
   step()
-  //fill(204,102,0);
-  //rect(s,s,t,t/2)
+  
   
 
   fill(0);
@@ -52,11 +49,11 @@ function draw(){
   x += vx;
   y += vy;
 
-  if(keyIsDown(LEFT_ARROW)){ x -= 5;
-    if(keyIsDown("S".charCodeAt(0))){ x -= 10;}
+  if(keyIsDown(LEFT_ARROW)){ x -= 10;
+    if(keyIsDown("S".charCodeAt(0))){ x -= 20;}
   }
-  if(keyIsDown(RIGHT_ARROW)){ x += 5;
-    if(keyIsDown("S".charCodeAt(0))){ x += 10;}
+  if(keyIsDown(RIGHT_ARROW)){ x += 10;
+    if(keyIsDown("S".charCodeAt(0))){ x += 20;}
   }
 
   y += vy;
